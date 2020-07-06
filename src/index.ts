@@ -9,7 +9,9 @@ interface InputMapping {
 
 const CONFIG: InputMapping = {
   'Wacom Pen and multitouch sensor Pen Pen': 'eDP-1',
-  'Wacom Pen and multitouch sensor Finger': 'eDP-1'
+  'Wacom Pen and multitouch sensor Finger': 'eDP-1',
+  'Wacom Pen and multitouch sensor Eraser': 'eDP-1',
+  'Weida Hi-Tech': 'DP-2-1',
 };
 
 (async () => {
@@ -20,7 +22,7 @@ const CONFIG: InputMapping = {
     console.log(dev.name);
     const map = CONFIG[dev.name];
     if (map) {
-      await xinput.mapToOutput(dev.id, map);
+      await xinput.mapToOutput(dev.id, map).catch(err => console.log(err));
     }
   }
 
