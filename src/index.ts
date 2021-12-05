@@ -11,7 +11,7 @@ const CONFIG: InputMapping = {
   'Wacom Pen and multitouch sensor Pen Pen': 'eDP-1',
   'Wacom Pen and multitouch sensor Finger': 'eDP-1',
   'Wacom Pen and multitouch sensor Eraser': 'eDP-1',
-  'Weida Hi-Tech': 'DP-1-1',
+  'Weida Hi-Tech': 'DP-2.1',
 };
 
 (async () => {
